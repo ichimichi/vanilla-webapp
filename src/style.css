@@ -172,12 +172,14 @@ table td:nth-child(5) {
   height: 30vh;
   display: flex;
   margin: 1rem;
-  padding: 1rem;
-  border: #ccc 1px solid;
 }
 
 .leftstat {
   width: 60%;
+  margin: 1rem;
+  padding: 1rem;
+  border: #ccc 1px solid;
+  border-radius: 0.4rem;
 }
 
 .rightstat {
@@ -195,4 +197,8 @@ table td:nth-child(5) {
 
 .btn-red {
   color: darkred;
+}
+
+.chartstat {
+  max-height: 100%;
 }

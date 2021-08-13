@@ -92,16 +92,14 @@ function renderCompanyList(companyList) {
     let temp = watchList.find((e) => e.id === element.id);
     if (temp) {
       iconBookmark.className = "fa fa-bookmark";
-      buttonBookmark.addEventListener("click", function () {
-        removeFromWatchList(element);
-      });
     } else {
       iconBookmark.className = "fa fa-bookmark-o";
-      buttonBookmark.addEventListener("click", function () {
-        addToWatchList(element);
-        iconBookmark.className = "fa fa-bookmark";
-      });
     }
+
+    buttonBookmark.addEventListener("click", function () {
+      addToWatchList(element);
+      iconBookmark.className = "fa fa-bookmark";
+    });
 
     buttonBookmark.appendChild(iconBookmark);
 

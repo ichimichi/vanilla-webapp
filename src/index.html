@@ -45,15 +45,17 @@
         <button id="btn-watchlist">Watchlist</button>
       </div>
       <div class="rightfooter">
-        <div class="leftstat" style="background-color: #c1c1c1">Left Stat</div>
-        <div class="rightstat" style="background-color: #d1d1d1">
-          Right Stat
+        <div class="leftstat">Left Stat</div>
+        <div class="rightstat">
+          <canvas id="chart" class="chartstat"></canvas>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="./app/data/company.js"></script>
     <script type="text/javascript" src="./app/data/watchlist.js"></script>
     <script type="text/javascript" src="./app/util.js"></script>
+    <script type="text/javascript" src="./app/stats.js"></script>
     <script type="text/javascript" src="./app/index.js"></script>
   </body>
 </html>
