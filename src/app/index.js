@@ -7,6 +7,10 @@ renderTable(tableHoldings);
 
 renderCompanyList(companyList);
 
+renderLeftStat(profileData);
+
+renderRightStat(companyList);
+
 var btnWatchlist = document.getElementById("btn-watchlist");
 btnWatchlist.addEventListener("click", function () {
   renderWatchList(watchList);
@@ -20,4 +24,5 @@ btnAllComapanies.addEventListener("click", function () {
 var btnDownload = document.getElementById("btn-download");
 btnDownload.addEventListener("click", function () {
   alert("Download");
+  downloadHoldingsAsCSV(tableHoldings.holding);
 });

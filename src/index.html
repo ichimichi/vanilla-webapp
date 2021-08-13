@@ -42,10 +42,28 @@
       </div>
       <div class="leftfooter">
         <button id="btn-allcompanies">All Companies</button>
+        <div class="vertical"></div>
         <button id="btn-watchlist">Watchlist</button>
       </div>
       <div class="rightfooter">
-        <div class="leftstat">Left Stat</div>
+        <div id="investmentSummary" class="leftstat">
+          <div class="leftInvSummary">
+            <div class="title">P&L</div>
+            <div id="profile-net"></div>
+            <div id="profile-net-cent"></div>
+          </div>
+          <div class="vertical forced-height"></div>
+          <div class="rightInvSummary">
+            <div>
+              <div>Total Investment</div>
+              <div id="profile-total"></div>
+            </div>
+            <div>
+              <div>Current Value</div>
+              <div id="profile-current"></div>
+            </div>
+          </div>
+        </div>
         <div class="rightstat">
           <canvas id="chart" class="chartstat"></canvas>
         </div>
@@ -53,9 +71,9 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="./app/data/company.js"></script>
+    <script type="text/javascript" src="./app/data/profile.js"></script>
     <script type="text/javascript" src="./app/data/watchlist.js"></script>
     <script type="text/javascript" src="./app/util.js"></script>
-    <script type="text/javascript" src="./app/stats.js"></script>
     <script type="text/javascript" src="./app/index.js"></script>
   </body>
 </html>

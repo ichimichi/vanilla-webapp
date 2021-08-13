@@ -185,3 +185,99 @@ function removeFromWatchList(company, rerender) {
   }
   alert(company.name + " removed from watchlist");
 }
+
+function renderLeftStat(profileData) {
+  var profileNet = document.getElementById("profile-net");
+  var profileNetCent = document.getElementById("profile-net-cent");
+  var profileTotal = document.getElementById("profile-total");
+  var profileCurrent = document.getElementById("profile-current");
+
+  profileTotal.innerHTML = "₹" + profileData.totalInvestment;
+  profileCurrent.innerHTML = "₹" + profileData.currentValue;
+
+  let net = profileData.currentValue - profileData.totalInvestment;
+  profileNet.innerHTML = "₹" + net;
+  let netCent = (net * 100) / profileData.totalInvestment;
+
+  if (net >= 0) {
+    profileNetCent.innerHTML = "+" + netCent + "%";
+    profileNet.style.color = "green";
+
+    profileNetCent.style.color = "green";
+  } else {
+    profileNetCent.innerHTML = "-" + netCent + "%";
+    profileNet.style.color = "red";
+    profileNetCent.style.color = "red";
+  }
+}
+
+function renderRightStat(companyList) {
+  var labels = [];
+  var netCharges = [];
+  var colors = [];
+
+  companyList.forEach(function (company) {
+    company.holding.forEach(function (holding) {
+      labels.push(holding.instrument);
+      colors.push(randomColor());
+      netCharges.push(holding.netCharge);
+    });
+  });
+
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Dataset",
+        data: netCharges,
+        backgroundColor: colors,
+        hoverOffset: 4,
+      },
+    ],
+  };
+
+  const config = {
+    type: "doughnut",
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: "right",
+        },
+      },
+    },
+  };
+
+  var myChart = new Chart(document.getElementById("chart"), config);
+}
+
+function randomColor() {
+  var letters = "0123456789ABCDEF".split("");
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function downloadHoldingsAsCSV(tableHoldings) {
+  filename = "holdings.csv";
+  var csv = "";
+  var keys = Object.keys(tableHoldings[0]);
+  csv += keys.join(",") + "\n";
+  tableHoldings.forEach(function (row) {
+    var values = [];
+    keys.forEach(function (key) {
+      values.push(row[key]);
+    });
+    csv += values.join(",") + "\n";
+  });
+  var blob = new Blob([csv], {
+    type: "text/csv;charset=utf-8;",
+  });
+  var a = document.createElement("a");
+  a.href = window.URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+}

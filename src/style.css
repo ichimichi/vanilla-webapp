@@ -171,6 +171,7 @@ table td:nth-child(5) {
   grid-area: rightfooter;
   height: 30vh;
   display: flex;
+  align-items: center;
   margin: 1rem;
 }
 
@@ -178,6 +179,7 @@ table td:nth-child(5) {
   width: 60%;
   margin: 1rem;
   padding: 1rem;
+  /* max-height: 50%; */
   border: #ccc 1px solid;
   border-radius: 0.4rem;
 }
@@ -201,4 +203,42 @@ table td:nth-child(5) {
 
 .chartstat {
   max-height: 100%;
+}
+
+.vertical {
+  border-left: #ccc 1px solid;
+}
+
+.forced-height {
+  min-height: 10vh;
+}
+
+.leftstat {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.leftInvSummary {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftInvSummary .title {
+  font-size: 1.2em;
+  margin-bottom: 2rem;
+}
+
+.rightInvSummary {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightInvSummary > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightInvSummary > div > div {
+  margin: 1rem;
 }
