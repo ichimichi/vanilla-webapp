@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
+        <div class="headertitle">Logo</div>
+        <div class="headerbutton">
+          <button>Companies</button>
+          <button>Holdings</button>
+          <button>Order Book</button>
+          <button>Profile</button>
+        </div>
+      </div>
+
+      <div class="leftlist">
+        <div id="companylist"></div>
+        <div id="Watchlist"></div>
+      </div>
+      <div class="search">
+        <button><i class="fa fa-search"></i></button>
+        <input type="text" placeholder=" Search Eg. Zerodha, Groww, Uptox" />
+      </div>
+      <div class="middleheader">
+        <div class="middleheadertitle">Holdings (6)</div>
+        <div class="middleheaderbutton">
+          <button><i class="fa fa-puzzle-piece"></i>Add Holdings</button
+          ><button><i class="fa fa-cloud-download"></i>Download</button>
+        </div>
+      </div>
+      <div class="middletable">
+        <div id="holdingtable"></div>
+      </div>
+      <div class="leftfooter">
+        <button id="btn-allcompanies">All Companies</button>
+        <button id="btn-watchlist">Watchlist</button>
+      </div>
+      <div class="rightfooter">
+        <div class="leftstat" style="background-color: #c1c1c1">Left Stat</div>
+        <div class="rightstat" style="background-color: #d1d1d1">
+          Right Stat
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./company.js"></script>
+    <script type="text/javascript" src="./watchlist.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

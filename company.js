@@ -1,0 +1,80 @@
+var companyList = [
+  {
+    name: "Upstox",
+    holding: [
+      {
+        instrument: "Tata Power",
+        quantity: 400,
+        avgCost: 114.0,
+        ltp: 118.15,
+        currentValue: 47260,
+        pAndL: 1660.0,
+        netCharge: 3.46,
+      },
+      {
+        instrument: "Adani Power",
+        quantity: 400,
+        avgCost: 114.0,
+        ltp: 118.15,
+        currentValue: 47260,
+        pAndL: 1660.0,
+        netCharge: 3.46,
+      },
+      {
+        instrument: "RPOWER *",
+        quantity: 4000,
+        avgCost: 114.0,
+        ltp: null,
+        currentValue: null,
+        pAndL: null,
+        netCharge: null,
+      },
+    ],
+  },
+  {
+    name: "Zerodha",
+    holding: [
+      {
+        instrument: "Mahindra",
+        quantity: 440,
+        avgCost: 134.0,
+        ltp: 110.15,
+        currentValue: 50060,
+        pAndL: 1000.0,
+        netCharge: null,
+      },
+      {
+        instrument: "Tata",
+        quantity: 400,
+        avgCost: 114.0,
+        ltp: 118.15,
+        currentValue: 7260,
+        pAndL: 960.0,
+        netCharge: 15.0,
+      },
+    ],
+  },
+  {
+    name: "Groww",
+    holding: [
+      {
+        instrument: "Mech",
+        quantity: 700,
+        avgCost: 114.0,
+        ltp: 90.15,
+        currentValue: 6660,
+        pAndL: 200.0,
+        netCharge: 7.0,
+      },
+      {
+        instrument: "Vigus",
+        quantity: 990,
+        avgCost: 104.0,
+        ltp: 100.15,
+        currentValue: 800,
+        pAndL: 60.0,
+        netCharge: 8.0,
+      },
+    ],
+  },
+];
