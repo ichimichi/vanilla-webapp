@@ -10,6 +10,10 @@ companyList.forEach(function (element) {
   var name = document.createElement("span");
   name.innerHTML = element.name.toUpperCase();
 
+  name.addEventListener("click", function () {
+    alert("Table " + element.name);
+  });
+
   var buttons = document.createElement("div");
   buttons.className = "companybuttons";
 
@@ -98,4 +102,9 @@ btnWatchlist.addEventListener("click", function () {
 var btnAllComapanies = document.getElementById("btn-allcompanies");
 btnAllComapanies.addEventListener("click", function () {
   alert("All COmpanies");
+});
+
+var btnDownload = document.getElementById("btn-download");
+btnDownload.addEventListener("click", function () {
+  alert("Download");
 });
