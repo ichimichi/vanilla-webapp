@@ -42,7 +42,7 @@ var companyList = [
       {
         instrument: "Mahindra",
         quantity: 440,
-        avgCost: 134.0,
+        avgCost: 134,
         ltp: 110.15,
         currentValue: 50060,
         pAndL: 1000.0,
@@ -52,7 +52,7 @@ var companyList = [
       {
         instrument: "Tata",
         quantity: 400,
-        avgCost: 114.0,
+        avgCost: 114,
         ltp: 118.15,
         currentValue: 7260,
         pAndL: 960.0,
@@ -68,17 +68,17 @@ var companyList = [
       {
         instrument: "Mech",
         quantity: 700,
-        avgCost: 114.0,
+        avgCost: 114,
         ltp: 90.15,
         currentValue: 6660,
         pAndL: 200.0,
-        netCharge: 7.0,
+        netCharge: 7.13,
         profit: false,
       },
       {
         instrument: "Vigus",
         quantity: 990,
-        avgCost: 104.0,
+        avgCost: 104,
         ltp: 100.15,
         currentValue: 800,
         pAndL: 60.0,

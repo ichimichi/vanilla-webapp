@@ -20,28 +20,33 @@ function renderTable(tableHoldings) {
       if (e[key]) {
         switch (key) {
           case "instrument":
-            data.innerHTML = e[key].toUpperCase();
+            data.innerHTML = e[key].toUpperCase("en-IN", {
+              minimumFractionDigits: 2,
+            });
             break;
           case "netCharge":
             if (e.profit) {
-              data.innerHTML = "+" + e[key];
+              data.innerHTML = "+" + e[key] + "%";
               data.style.color = "green";
             } else {
-              data.innerHTML = "-" + e[key];
+              data.innerHTML = "-" + e[key] + "%";
               data.style.color = "red";
             }
             break;
           case "pAndL":
+            data.innerHTML = e[key].toLocaleString("en-IN", {
+              minimumFractionDigits: 2,
+            });
             if (e.profit) {
-              data.innerHTML = e[key];
               data.style.color = "green";
             } else {
-              data.innerHTML = +e[key];
               data.style.color = "red";
             }
             break;
           default:
-            data.innerHTML = e[key];
+            data.innerHTML = e[key].toLocaleString("en-IN", {
+              minimumFractionDigits: 2,
+            });
         }
       } else {
         data.innerHTML = "-";
