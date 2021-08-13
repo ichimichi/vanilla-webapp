@@ -1,5 +1,6 @@
 var companyList = [
   {
+    id: 1,
     name: "Upstox",
     holding: [
       {
@@ -10,6 +11,7 @@ var companyList = [
         currentValue: 47260,
         pAndL: 1660.0,
         netCharge: 3.46,
+        profit: true,
       },
       {
         instrument: "Adani Power",
@@ -19,6 +21,7 @@ var companyList = [
         currentValue: 47260,
         pAndL: 1660.0,
         netCharge: 3.46,
+        profit: false,
       },
       {
         instrument: "RPOWER *",
@@ -28,10 +31,12 @@ var companyList = [
         currentValue: null,
         pAndL: null,
         netCharge: null,
+        profit: null,
       },
     ],
   },
   {
+    id: 2,
     name: "Zerodha",
     holding: [
       {
@@ -42,6 +47,7 @@ var companyList = [
         currentValue: 50060,
         pAndL: 1000.0,
         netCharge: null,
+        profit: true,
       },
       {
         instrument: "Tata",
@@ -51,10 +57,12 @@ var companyList = [
         currentValue: 7260,
         pAndL: 960.0,
         netCharge: 15.0,
+        profit: true,
       },
     ],
   },
   {
+    id: 3,
     name: "Groww",
     holding: [
       {
@@ -65,6 +73,7 @@ var companyList = [
         currentValue: 6660,
         pAndL: 200.0,
         netCharge: 7.0,
+        profit: false,
       },
       {
         instrument: "Vigus",
@@ -74,7 +83,28 @@ var companyList = [
         currentValue: 800,
         pAndL: 60.0,
         netCharge: 8.0,
+        profit: true,
       },
     ],
   },
+];
+
+var columnNameList = [
+  "Instrument",
+  "Qty.",
+  "Avg. Cost",
+  "LTP",
+  "Cur. Value",
+  "P&L",
+  "Net Change",
+];
+
+var holdingKeyList = [
+  "instrument",
+  "quantity",
+  "avgCost",
+  "ltp",
+  "currentValue",
+  "pAndL",
+  "netCharge",
 ];
