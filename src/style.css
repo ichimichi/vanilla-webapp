@@ -79,10 +79,10 @@ table td:nth-child(5) {
 .header {
   grid-area: header;
   background-color: #fefefe;
-  text-align: center;
   height: 10vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: #ccc 1px solid;
 }
 
@@ -90,6 +90,7 @@ table td:nth-child(5) {
   padding-left: 2rem;
   font-size: 3rem;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .headerbutton {
@@ -97,10 +98,6 @@ table td:nth-child(5) {
   padding-right: 2rem;
   display: flex;
   justify-content: flex-end;
-  align-items: stretch;
-}
-
-.headerbutton > button {
 }
 
 .search {

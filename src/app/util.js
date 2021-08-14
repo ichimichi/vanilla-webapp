@@ -266,6 +266,7 @@ function downloadHoldingsAsCSV(tableHoldings) {
   var csv = "";
   var keys = Object.keys(tableHoldings[0]);
   csv += keys.join(",") + "\n";
+
   tableHoldings.forEach(function (row) {
     var values = [];
     keys.forEach(function (key) {
@@ -276,6 +277,7 @@ function downloadHoldingsAsCSV(tableHoldings) {
   var blob = new Blob([csv], {
     type: "text/csv;charset=utf-8;",
   });
+
   var a = document.createElement("a");
   a.href = window.URL.createObjectURL(blob);
   a.download = filename;

@@ -11,18 +11,16 @@ renderLeftStat(profileData);
 
 renderRightStat(companyList);
 
-var btnWatchlist = document.getElementById("btn-watchlist");
-btnWatchlist.addEventListener("click", function () {
+document.getElementById("btn-watchlist").addEventListener("click", function () {
   renderWatchList(watchList);
 });
 
-var btnAllComapanies = document.getElementById("btn-allcompanies");
-btnAllComapanies.addEventListener("click", function () {
-  renderCompanyList(companyList);
-});
+document
+  .getElementById("btn-allcompanies")
+  .addEventListener("click", function () {
+    renderCompanyList(companyList);
+  });
 
-var btnDownload = document.getElementById("btn-download");
-btnDownload.addEventListener("click", function () {
-  alert("Download");
+document.getElementById("btn-download").addEventListener("click", function () {
   downloadHoldingsAsCSV(tableHoldings.holding);
 });
