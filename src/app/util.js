@@ -211,25 +211,27 @@ function renderLeftStat(profileData) {
 }
 
 function renderRightStat(companyList) {
-  var labels = [];
-  var netCharges = [];
-  var colors = [];
+  var labelList = [];
+  var netChargeList = [];
+  var quantityList = [];
+  var colorList = [];
 
   companyList.forEach(function (company) {
     company.holding.forEach(function (holding) {
-      labels.push(holding.instrument);
-      colors.push(randomColor());
-      netCharges.push(holding.netCharge);
+      labelList.push(holding.instrument);
+      colorList.push(randomColor());
+      netChargeList.push(holding.netCharge);
+      quantityList.push(holding.quantity);
     });
   });
 
   const data = {
-    labels: labels,
+    labels: labelList,
     datasets: [
       {
         label: "Dataset",
-        data: netCharges,
-        backgroundColor: colors,
+        data: quantityList,
+        backgroundColor: colorList,
         hoverOffset: 4,
       },
     ],
