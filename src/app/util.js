@@ -173,7 +173,7 @@ function addToWatchList(company) {
     alert(company.name + " is already in watchlist");
   } else {
     watchList.push(company);
-    alert(company.name + " added to watchlist");
+    // alert(company.name + " added to watchlist");
   }
   console.log(watchList);
 }
@@ -183,7 +183,7 @@ function removeFromWatchList(company, rerender) {
   if (rerender) {
     renderWatchList(watchList);
   }
-  alert(company.name + " removed from watchlist");
+  // alert(company.name + " removed from watchlist");
 }
 
 function renderLeftStat(profileData) {
