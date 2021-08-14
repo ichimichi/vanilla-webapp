@@ -20,52 +20,59 @@
         </div>
       </div>
 
-      <div class="leftlist">
-        <div id="companylist"></div>
-        <div id="Watchlist"></div>
-      </div>
-      <div class="search">
-        <button><i class="fa fa-search"></i></button>
-        <input type="text" placeholder=" Search Eg. Zerodha, Groww, Uptox" />
-      </div>
-      <div class="middleheader">
-        <div class="middleheadertitle">Holdings (6)</div>
-        <div class="middleheaderbutton">
-          <button><i class="fa fa-puzzle-piece"></i>Add Holdings</button
-          ><button id="btn-download">
-            <i class="fa fa-cloud-download"></i>Download
-          </button>
+      <div class="sidebar">
+        <div class="search">
+          <button><i class="fa fa-search"></i></button>
+          <input type="text" placeholder=" Search Eg. Zerodha, Groww, Uptox" />
+        </div>
+        <div class="leftlist">
+          <div id="companylist"></div>
+          <div id="Watchlist"></div>
+        </div>
+        <div class="leftfooter">
+          <button id="btn-allcompanies">All Companies</button>
+          <div class="vertical"></div>
+          <button id="btn-watchlist">Watchlist</button>
         </div>
       </div>
-      <div class="middletable">
-        <div id="holdingtable"></div>
-      </div>
-      <div class="leftfooter">
-        <button id="btn-allcompanies">All Companies</button>
-        <div class="vertical"></div>
-        <button id="btn-watchlist">Watchlist</button>
-      </div>
-      <div class="rightfooter">
-        <div id="investmentSummary" class="leftstat">
-          <div class="leftInvSummary">
-            <div class="title">P&L</div>
-            <div id="profile-net"></div>
-            <div id="profile-net-cent"></div>
-          </div>
-          <div class="vertical forced-height"></div>
-          <div class="rightInvSummary">
-            <div>
-              <div>Total Investment</div>
-              <div id="profile-total"></div>
-            </div>
-            <div>
-              <div>Current Value</div>
-              <div id="profile-current"></div>
-            </div>
+
+      <div class="main">
+        <div class="middleheader">
+          <div class="middleheadertitle">Holdings (6)</div>
+          <div class="middleheaderbutton">
+            <button><i class="fa fa-puzzle-piece"></i>Add Holdings</button
+            ><button id="btn-download">
+              <i class="fa fa-cloud-download"></i>Download
+            </button>
           </div>
         </div>
-        <div class="rightstat">
-          <canvas id="chart" class="chartstat"></canvas>
+
+        <div class="middletable">
+          <div id="holdingtable"></div>
+        </div>
+
+        <div class="rightfooter">
+          <div id="investmentSummary" class="leftstat">
+            <div class="leftInvSummary">
+              <div class="title">P&L</div>
+              <div id="profile-net"></div>
+              <div id="profile-net-cent"></div>
+            </div>
+            <div class="vertical forced-height"></div>
+            <div class="rightInvSummary">
+              <div>
+                <div>Total Investment</div>
+                <div id="profile-total"></div>
+              </div>
+              <div>
+                <div>Current Value</div>
+                <div id="profile-current"></div>
+              </div>
+            </div>
+          </div>
+          <div class="rightstat">
+            <canvas id="chart" class="chartstat"></canvas>
+          </div>
         </div>
       </div>
     </div>
