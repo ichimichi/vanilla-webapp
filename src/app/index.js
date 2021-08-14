@@ -22,5 +22,5 @@ document
   });
 
 document.getElementById("btn-download").addEventListener("click", function () {
-  downloadHoldingsAsCSV(tableHoldings.holding);
+  downloadHoldingsAsCSV(tableHoldings);
 });

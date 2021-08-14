@@ -263,12 +263,13 @@ function randomColor() {
 }
 
 function downloadHoldingsAsCSV(tableHoldings) {
-  filename = "holdings.csv";
+  var filename = `holdings-${tableHoldings.name.toLowerCase()}.csv`;
+
   var csv = "";
-  var keys = Object.keys(tableHoldings[0]);
+  var keys = Object.keys(tableHoldings.holding[0]);
   csv += keys.join(",") + "\n";
 
-  tableHoldings.forEach(function (row) {
+  tableHoldings.holding.forEach(function (row) {
     var values = [];
     keys.forEach(function (key) {
       values.push(row[key]);
