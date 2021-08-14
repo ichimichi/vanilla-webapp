@@ -248,15 +248,17 @@ function renderRightStat(companyList) {
     },
   };
 
-  var myChart = new Chart(document.getElementById("chart"), config);
+  new Chart(document.getElementById("chart"), config);
 }
 
 function randomColor() {
   var letters = "0123456789ABCDEF".split("");
   var color = "#";
+
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
+
   return color;
 }
 
@@ -273,6 +275,7 @@ function downloadHoldingsAsCSV(tableHoldings) {
     });
     csv += values.join(",") + "\n";
   });
+
   var blob = new Blob([csv], {
     type: "text/csv;charset=utf-8;",
   });
