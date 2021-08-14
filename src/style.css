@@ -190,12 +190,12 @@ table td:nth-child(5) {
   justify-content: space-between;
 }
 
-.btn-green {
+.color-green {
   color: green;
 }
 
-.btn-red {
-  color: darkred;
+.color-red {
+  color: red;
 }
 
 .chartstat {

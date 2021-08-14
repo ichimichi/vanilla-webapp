@@ -27,10 +27,10 @@ function renderTable(tableHoldings) {
           case "netCharge":
             if (e.profit) {
               data.innerHTML = "+" + e[key] + "%";
-              data.style.color = "green";
+              data.className = "color-green";
             } else {
               data.innerHTML = "-" + e[key] + "%";
-              data.style.color = "red";
+              data.className = "color-red";
             }
             break;
           case "pAndL":
@@ -38,9 +38,9 @@ function renderTable(tableHoldings) {
               minimumFractionDigits: 2,
             });
             if (e.profit) {
-              data.style.color = "green";
+              data.className = "color-green";
             } else {
-              data.style.color = "red";
+              data.className = "color-red";
             }
             break;
           default:
@@ -80,11 +80,11 @@ function renderCompanyList(companyList) {
 
     var buttonBuy = document.createElement("button");
     buttonBuy.innerHTML = "Buy";
-    buttonBuy.className = "btn-green";
+    buttonBuy.className = "color-green";
 
     var buttonSell = document.createElement("button");
     buttonSell.innerHTML = "Sell";
-    buttonSell.className = "btn-red";
+    buttonSell.className = "color-red";
 
     var buttonBookmark = document.createElement("button");
     var iconBookmark = document.createElement("i");
@@ -141,11 +141,11 @@ function renderWatchList(watchList) {
 
       var buttonBuy = document.createElement("button");
       buttonBuy.innerHTML = "Buy";
-      buttonBuy.className = "btn-green";
+      buttonBuy.className = "color-green";
 
       var buttonSell = document.createElement("button");
       buttonSell.innerHTML = "Sell";
-      buttonSell.className = "btn-red";
+      buttonSell.className = "color-red";
 
       var buttonBookmark = document.createElement("button");
       var iconBookmark = document.createElement("i");
@@ -201,13 +201,12 @@ function renderLeftStat(profileData) {
 
   if (net >= 0) {
     profileNetCent.innerHTML = "+" + netCent + "%";
-    profileNet.style.color = "green";
-
-    profileNetCent.style.color = "green";
+    profileNet.className = "color-green";
+    profileNetCent.className = "color-green";
   } else {
     profileNetCent.innerHTML = "-" + netCent + "%";
-    profileNet.style.color = "red";
-    profileNetCent.style.color = "red";
+    profileNet.className = "color-red";
+    profileNetCent.className = "color-red";
   }
 }
 
